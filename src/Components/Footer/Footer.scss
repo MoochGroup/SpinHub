@@ -1,0 +1,17 @@
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #333;
+  margin-top: 50px;
+
+  .iconsContacts {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+}
