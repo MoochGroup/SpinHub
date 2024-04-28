@@ -2,7 +2,7 @@
 function Footer() {
   return (
     <footer>
-      <p>&copy; 2024 Marc-Antoine Boulet / Mooch group . All rights reserved .</p>
+      <p>&copy; 2024 Marc-Antoine Boulet / Zakary Mitrovic / Mooch group . All rights reserved .</p>
       <div className="iconsContacts">
         <a href="https://www.facebook.com/?locale=fr_CA">
           <svg

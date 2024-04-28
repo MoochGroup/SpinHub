@@ -1,0 +1,21 @@
+.BaseUrl__Section{
+    & .Title__Div{
+        & .SpinHub__Title{
+            color: white;
+            @include Titan-One-Font;
+            font-weight: 400;
+            font-size: 100px;
+            animation-duration: 1.5s;
+        }
+
+        & .SpinHub__Title__Description{
+            position: relative;
+            color: white;
+            @include Gotham-Font;
+            font-weight: 600;
+            font-size: 25px;
+            
+        }
+        
+    }
+}
