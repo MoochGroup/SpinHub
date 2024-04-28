@@ -1,6 +1,6 @@
 import './App.css'
 import Layout from "../Layout/Layout";
-import BaseUrl from '../BaseUrl/BaseUrl';
+import SpinHub from '../SpinHub/SpinHub';
 import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom';
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
           path: '/',
           element: <Layout />,
           children: [
-            { element: <BaseUrl />, index: true },
+            { element: <SpinHub />, index: true },
             { path: '*', element: <Navigate to="/" replace /> }
           ],
         },

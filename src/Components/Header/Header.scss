@@ -1,4 +1,4 @@
-.BaseUrl__Section{
+.Header__Section{
     & .Title__Div{
         & .SpinHub__Title{
             color: white;
@@ -17,5 +17,17 @@
             
         }
         
+    }
+
+    & .Icon__Container{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        & .Account__Icon{
+            & span{
+                color: white;
+                font-size: 25px;
+            }
+        }
     }
 }
