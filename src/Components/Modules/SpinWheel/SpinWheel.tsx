@@ -1,13 +1,6 @@
 import { useState } from 'react'
 import { Wheel } from 'react-custom-roulette'
 
-interface ImageProps {
-  uri: string;
-  offsetX?: number; // Optional
-  offsetY?: number; // Optional
-  sizeMultiplier?: number; // Optional
-  landscape?: boolean; // Optional
-}
 
 function SpinWheel() {
 
@@ -30,17 +23,30 @@ function SpinWheel() {
 
     return (
       <section>
+        <a onClick={handleSpinClick}>
     <Wheel
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={data}
         backgroundColors={['#3e3e3e', '#df3428', '#fff']}
-        
+        pointerProps={{src: '/img/MoochPointerTest2.png'}}
+
+        // Gestion Border extérieur 
+        outerBorderColor={"#fff"}
+        outerBorderWidth={2}
+
+        innerBorderWidth={50}
+
+        // Gestion border intérieur
+        radiusLineColor={"#fff"}
+        radiusLineWidth={2}
+
         onStopSpinning={() => {
           setMustSpin(false);
         }}
       />
-      <button onClick={handleSpinClick}>SPIN</button>
+      </a>
+      
       </section>
     );
 
