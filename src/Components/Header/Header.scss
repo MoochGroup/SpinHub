@@ -1,33 +1,35 @@
-.Header__Section{
-    & .Title__Div{
-        & .SpinHub__Title{
-            color: white;
-            @include Titan-One-Font;
-            font-weight: 400;
-            font-size: 100px;
-            animation-duration: 1.5s;
-        }
-
-        & .SpinHub__Title__Description{
-            position: relative;
-            color: white;
-            @include Gotham-Font;
-            font-weight: 600;
-            font-size: 25px;
-            
-        }
-        
+.Header__Section {
+  & .Title__Div {
+    & .SpinHub__Title {
+      color: white;
+      @include Titan-One-Font;
+      font-weight: 400;
+      font-size: 100px;
+      animation-duration: 1.5s;
     }
 
-    & .Icon__Container{
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        & .Icon{
-            & span{
-                color: white;
-                font-size: 25px;
-            }
-        }
+    & .SpinHub__Title__Description {
+      position: relative;
+      color: white;
+      @include Gotham-Font;
+      font-weight: 600;
+      font-size: 25px;
     }
+  }
+
+  & .Icon__Container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    & .Icon {
+      & span {
+        color: white;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.text-color {
+  color: white;
 }
