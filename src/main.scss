@@ -72,7 +72,8 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(to left,rgb(138, 52, 52),rgb(97, 97, 199));
+  background: url("/img/testpattern.png");
+    background-size: 1000px;
   }
 }
 
