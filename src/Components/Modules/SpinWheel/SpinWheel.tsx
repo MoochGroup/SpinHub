@@ -29,32 +29,34 @@ function SpinWheel() {
           <CreateWheel />
         </div>
       </div>
-
-      {/* <a onClick={handleSpinClick}>
-    <Wheel
-        mustStartSpinning={mustSpin}
-        prizeNumber={prizeNumber}
-        data={data}
-        backgroundColors={['#3e3e3e', '#df3428', '#fff']}
-        pointerProps={{src: '/img/MoochPointerTest2.png'}}
-
-        // Gestion Border extérieur 
-        outerBorderColor={"#fff"}
-        outerBorderWidth={2}
-
-        innerBorderWidth={50}
-
-        // Gestion border intérieur
-        radiusLineColor={"#fff"}
-        radiusLineWidth={2}
-
-        onStopSpinning={() => {
-          setMustSpin(false);
-        }}
-      />
-      </a>
-       */}
     </section>
   );
 }
 export default SpinWheel;
+
+{
+  /* <a onClick={handleSpinClick}>
+<Wheel
+  mustStartSpinning={mustSpin}
+  prizeNumber={prizeNumber}
+  data={data}
+  backgroundColors={['#3e3e3e', '#df3428', '#fff']}
+  pointerProps={{src: '/img/MoochPointerTest2.png'}}
+
+  // Gestion Border extérieur 
+  outerBorderColor={"#fff"}
+  outerBorderWidth={2}
+
+  innerBorderWidth={50}
+
+  // Gestion border intérieur
+  radiusLineColor={"#fff"}
+  radiusLineWidth={2}
+
+  onStopSpinning={() => {
+    setMustSpin(false);
+  }}
+/>
+</a>
+ */
+}
