@@ -17,16 +17,16 @@ function CreateWheel() {
   return (
     <Drawer>
       <DrawerTrigger className="color-text">Click here</DrawerTrigger>
-      <DrawerContent>
+      <DrawerContent className="Drawer">
         <DrawerHeader>
-          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-          <DrawerDescription>This action cannot be undone.</DrawerDescription>
+          <DrawerTitle>Create a new wheel</DrawerTitle>
+          <DrawerDescription>Create your new wheel however you desire</DrawerDescription>
         </DrawerHeader>
 
-        <CardForCreate />
+          <CardForCreate />
 
         <DrawerFooter>
-          <Button>Submit</Button>
+          <Button className="CreateButton">Create new wheel</Button>
           <DrawerClose>
             <Button variant="outline">Cancel</Button>
           </DrawerClose>
