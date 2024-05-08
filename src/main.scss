@@ -68,15 +68,15 @@
 
 @layer base {
   * {
-    @apply border-border;
+   // @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-  background: url("/img/testpattern.png");
+   // @apply bg-background text-foreground;
+    background-image: url("/Img/testpattern.png");
     background-size: 1000px;
+    //background-color: black;
   }
 }
-
 
 /*------------------------------------ FONTS ------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
