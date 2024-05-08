@@ -1,5 +1,5 @@
 // import { useState } from 'react'
-import { Wheel } from 'react-custom-roulette'
+// import { Wheel } from 'react-custom-roulette'
 
 import CreateWheel from "../CreateWheel/CreateWheel";
 
@@ -29,7 +29,7 @@ function SpinWheel() {
           <CreateWheel />
         </div>
       </div>
-      <Wheel data={data} backgroundColors={["darkgrey", 'lightgrey']}/>
+      {/* <Wheel data={data} backgroundColors={["darkgrey", 'lightgrey']}/> */}
     </section>
   );
 }

@@ -17,10 +17,34 @@ import { useState } from "react";
 function CardForCreate() {
   const [addPrizeNumber, setAddPrizeNumber] = useState<boolean>(false);
   const [customBackgroundColors, setCustomBackgroundColors] = useState<boolean>(false);
+  const [numberOfItems, setNumberOfItems] = useState<number>(0);
+  const [itemTexts, setItemTexts] = useState<string[]>([]);
 
   /*Handle Checkboxes*/
   const handleCheckboxChange = (setState: React.Dispatch<React.SetStateAction<boolean>>) => {
     setState(prevValue => !prevValue);
+  };
+
+  /*Handle Item Text Input Change*/
+  const handleItemTextChange = (index: number, value: string) => {
+    const updatedItemTexts = [...itemTexts];
+    updatedItemTexts[index] = value;
+    setItemTexts(updatedItemTexts);
+  };
+
+
+  const renderItemTextInputs = () => {
+    return [...Array(numberOfItems)].map((_, index) => (
+      <div key={index}>
+        <Label htmlFor={`itemText-${index + 1}`}>Item {index + 1} Text</Label>
+        <Input
+          id={`itemText-${index + 1}`}
+          placeholder={`Text for item ${index + 1}`}
+          value={itemTexts[index] || ''}
+          onChange={(e) => handleItemTextChange(index, e.target.value)}
+        />
+      </div>
+    ));
   };
 
   return (
@@ -54,7 +78,18 @@ function CardForCreate() {
             </div>
 
             {/* Data */}
-
+            
+            <div className="flex flex-col space-y-1.5">
+              <Label htmlFor="numberOfItems">Number of Items</Label>
+              <Input
+                type="number"
+                id="numberOfItems"
+                placeholder="Enter number of items"
+                value={numberOfItems}
+                onChange={(e) => setNumberOfItems(parseInt(e.target.value))}
+              />
+              {numberOfItems > 0 && renderItemTextInputs()}
+            </div>
 
 
 
@@ -68,7 +103,9 @@ function CardForCreate() {
               {customBackgroundColors && (
                 <div>
                   <Label htmlFor="prizeNumber">Custom background colors</Label>
-                  <Input type="color" id="prizeNumber" placeholder="0 to ∞ $" />
+                  {numberOfItems.map((item, i)=> (<>
+                    <Input type="color" id="prizeNumber" placeholder="0 to ∞ $" />
+                  </>))}
                 </div>
               )}
             </div>
